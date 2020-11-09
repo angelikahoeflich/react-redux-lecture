@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import{connect} from 'react-redux';
+import {loginUser} from '../redux/reducer';
+
 
 class Login extends Component {
     constructor(){
@@ -45,4 +48,8 @@ class Login extends Component {
     }
 }
 
-export default Login;
+const mapStateToProps = state => state;
+
+export default connect(mapStateToProps)(Login);
+
+
