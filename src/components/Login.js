@@ -20,6 +20,7 @@ class Login extends Component {
 
     loginMagic = (e) => {
         e.preventDefault();
+        this.props.loginUser(this.state);
         this.props.history.push('/welcome')
     }
 
@@ -50,6 +51,6 @@ class Login extends Component {
 
 const mapStateToProps = state => state;
 
-export default connect(mapStateToProps)(Login);
+export default connect(mapStateToProps, {loginUser})(Login);
 
 
